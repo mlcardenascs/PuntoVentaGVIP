@@ -1,0 +1,133 @@
+﻿<Page x:Class="GVIP_Administrativo_3._0.ViewModelss.SupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GVIP_Administrativo_3._0.ViewModelss"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="SupplierPage">
+    <Grid Background="{StaticResource colorSecundario}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="{StaticResource colorPrincipal}"
+                BorderThickness="0,0,0,2">
+            <TextBlock Text="Proveedores"
+                       Foreground="White"
+                       FontSize="24"
+                       HorizontalAlignment="Center"
+                       Grid.Row="0" />
+        </Border>
+        <!-- Parte del contenido del formulario-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="850" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!-- Formulario principal -->
+            <Grid Grid.Column="0"
+                  Background="Transparent">
+                <Border Background="Transparent"
+                        BorderBrush="{StaticResource colorPrincipal}"
+                        BorderThickness="0,0,2,0"></Border>
+                <Border Background="Transparent"
+                        Width="400">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Datos del proveedor"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="0" />
+                        <TextBlock Text="Nombre*:"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Grid.Row="1" />
+                        <TextBox Height="30"
+                                 Width="200"
+                                 Grid.Row="1"
+                                 Margin="0,0,0,70"
+                                 x:Name="txt_nombre"/>
+                        <TextBlock Text="Apellido Paterno:"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Grid.Row="2" />
+                        <TextBox Height="30"
+                                 Width="200"
+                                 Grid.Row="2"
+                                 Margin="150,4,80,70" 
+                                 x:Name="txt_apellido_paterno"/>
+                        <TextBlock Text="Apellido Materno:"
+                                   Foreground="White"
+                                   FontSize="18 "
+                                   Grid.Row="3" />
+                        <TextBox Height="30"
+                                 Width="200"
+                                 Grid.Row="3"
+                                 Margin="150,5,80,70" 
+                                 x:Name="txt_apellido_materno"/>
+                        <TextBlock Text="RFC*:"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Grid.Row="4" />
+                        <TextBox Height="30"
+                                 Width="200"
+                                 Grid.Row="4"
+                                 Margin="140,5,80,70"
+                                 x:Name="txt_rfc"
+                                 MaxLength="13"
+                                 />
+                        <TextBlock Text="Dirección*:"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Grid.Row="5" />
+                        <TextBox Height="30"
+                                 Width="200"
+                                 Grid.Row="5"
+                                 Margin="40,0,0,70"
+                                 x:Name="txt_direccion"/>
+                        <TextBlock Text="Tipo de proveedor*:"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Grid.Row="7" />
+                        <ComboBox x:Name="cbox_tipo_proveedor"
+                                  HorizontalAlignment="Left"
+                                  Margin="170,-70,0,0"
+                                  Grid.Row="6"
+                                  Width="150" 
+                                  Height="30"
+                                  HorizontalContentAlignment="Center"
+                                  VerticalContentAlignment="Center"
+                                  FontSize="17"
+                                  />
+                    </Grid>
+                </Border>
+            </Grid>
+            <TextBlock Text="Acción:"
+                       FontSize="20"
+                       Foreground="White"
+                       Grid.Column="1"
+                       Margin="175,0,0,0" />
+            <ComboBox x:Name="cbox_opciones"
+                      Grid.Column="1"
+                      Width="200"
+                      Height="30"
+                      HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center"
+                      FontSize="17"
+                      Margin="0,-600,0,0"
+                      SelectionChanged="cbox_opciones_SelectionChanged" />
+        </Grid>
+    </Grid>
+</Page>

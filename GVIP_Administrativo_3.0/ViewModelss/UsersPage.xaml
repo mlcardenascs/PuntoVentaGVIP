@@ -1,0 +1,138 @@
+﻿<Page x:Class="GVIP_Administrativo_3._0.ViewModelss.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GVIP_Administrativo_3._0.ViewModelss"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="UsersPage">
+
+    <Grid Background="{StaticResource colorSecundario}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Border BorderBrush="{StaticResource colorPrincipal}"
+                BorderThickness="0,0,0,2">
+            <TextBlock Grid.Row="0"
+                       Text="Usuarios"
+                       Foreground="White"
+                       FontSize="24"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+        </Border>
+        
+        <!-- grid del contenido-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="850"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <!-- contenido principal bueno -->
+            <Border Background="Transparent"
+                    BorderBrush="{StaticResource colorPrincipal}"
+                    BorderThickness="0,0,2,0"></Border>
+            <Border Background="Transparent"
+                    Width="400"
+                    Grid.Column="0">
+                
+                
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Datos del usuario" Grid.Row="0"
+                               Foreground="White"
+                               FontSize="20"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Text="CURP del empleado*:" 
+                               Grid.Row="1"
+                               Foreground="White"
+                               FontSize="18"/>
+                    <TextBox Grid.Row="1"
+                             Width="170"
+                             Height="30"
+                             Margin="115,0,0,100"
+                             x:Name="txt_curp"
+                             MaxLength="18" />
+                    <TextBlock Text="Nombre de usuario*:"
+                               Grid.Row="2"
+                               Foreground="White"
+                               FontSize="18" />
+                    <TextBox Grid.Row="2"
+                             Width="170"
+                             Height="30"
+                             Margin="110,0,0,100"
+                             x:Name="txt_usuario"/>
+                    <TextBlock Text="Contraseña*:"
+                               Grid.Row="3"
+                               Foreground="White"
+                               FontSize="18" 
+                                />
+                    <TextBox Grid.Row="3"
+                             Width="170"
+                             Height="30"
+                             Margin="-20,0,0,100" 
+                             x:Name="txt_contrasenia1"/>
+                    <TextBlock Text="Repetir contraseña*:"
+                               Grid.Row="4"
+                               Foreground="White"
+                               FontSize="18" />
+                    <TextBox Grid.Row="4"
+                             Width="170"
+                             Height="30"
+                             Margin="100,0,0,100" 
+                             x:Name="txt_contrasenia2"/>
+                    <TextBlock Grid.Row="5"
+                               Text="Tipo de usuario:"
+                               Foreground="White"
+                               FontSize="18"/>
+                    <ComboBox Grid.Row="5"
+                              x:Name="cbox_tipo_usuario"
+                              Width="150"
+                              Height="30"
+                              Margin="30,0,0,100"
+                              HorizontalContentAlignment="Center"
+                              FontSize="17"
+                              />
+                </Grid>
+                
+            </Border>
+            <Border Background="Transparent"
+                    Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0"
+                            Background="Transparent">
+                        <StackPanel>
+                            <TextBlock Text="Acción:"
+                                       Foreground="White"
+                                       FontSize="20"
+                                       HorizontalAlignment="Center"/>
+                            <ComboBox Width="210"
+                                      Height="30"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalContentAlignment="Center"
+                                      FontSize="18"
+                                      x:Name="cbox_opciones"
+                                      SelectionChanged="cbox_opciones_SelectionChanged" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                
+                
+            </Border>
+        </Grid>
+    </Grid>
+</Page>
